@@ -18,8 +18,15 @@ public class SceneLoaderScript : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void LoadScene(string sceneName)
+    {
+        Debug.Log("Scene loaded: " + sceneName);
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void QuitButton()
     {
+        Debug.Log("Quit requested");
         Application.Quit();
     }
 }
